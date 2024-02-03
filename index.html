@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="Colors/color-5.css" class="alternate-style" title="color-5" disabled>
     <link rel="stylesheet" href="Colors/style-switcher/style-switcher.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="new.css">
 
 </head>
 
@@ -43,22 +44,22 @@
                 <li><a href="#contact"><i class="fa fa-comments"></i> Contact</a></li>
             </ul>
 
-             <div class="style-switcher">
-        <div class="style-switcher-toggler s-icon">
-            <i class="fas fa-cog fa-spin"></i>
-        </div>
-        <div class="day-night s-icon">
-            <i class="fas "></i>
-        </div>
-        <h4>Theme color</h4>
-        <div class="colors">
-            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
-        </div>
-    </div>
+            <div class="style-switcher">
+                <div class="style-switcher-toggler s-icon">
+                    <i class="fas fa-cog fa-spin"></i>
+                </div>
+                <div class="day-night s-icon">
+                    <i class="fas "></i>
+                </div>
+                <h4>Theme color</h4>
+                <div class="colors">
+                    <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+                    <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+                    <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+                    <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+                    <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+                </div>
+            </div>
 
         </div>
         <!-- aside end -->
@@ -109,7 +110,7 @@
                                             <p>Age: <span id="sid"></span></p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p>Website: <span>https://www.sidboyinhell.tech/</span></p>
+                                            <p>Website: <span>https://www.sidboy-dev.cf/</span></p>
                                         </div>
                                         <div class="info-item padd-15">
                                             <p>Email: <span>sidahire094@gmail.com</span></p>
@@ -189,7 +190,8 @@
                                                     </h3>
                                                     <h4 class="timeline-title">Sencondary Primary School</h4>
                                                     <p class="timeline-text">I've completed my secondary primary AKA
-                                                        11<sup>th</sup> & 12<sup>th</sup> from Abhinav Collage, Also I've done my preparation of IIT-JEE from
+                                                        11<sup>th</sup> & 12<sup>th</sup> from Abhinav Collage, Also
+                                                        I've done my preparation of IIT-JEE from
                                                         YouTube</p>
                                                 </div>
                                                 <div class="timeline-item">
@@ -376,42 +378,111 @@
     </script>
 
     <script>
- 
-    setInterval(showTime, 1000);
-   function showTime() {
-       let date = new Date();
-       let Y2 = date.getFullYear() ;
-       let M2 = date.getMonth() + 1;
-       let D2 = date.getDate();
-       var Month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-       var D1 = 1;
-       var M1 = 5;
-       var Y1 = 2005;
-       
-       if (D1 > D2) {
-           D2 = D2 + Month[M2 - 2];
-           M2 = M2 - 1;
-       }
-       if (M1 > M2) {
-           M2 = M2 + 12;
-           Y2 = Y2 - 1;
-       }
-       var D = D2 - D1;
-       var M = M2 - M1;
-       var Y = Y2 - Y1;
-   
-       let currentTime = Y + "years "
-               + M + "months " + D + "days";
-   
-       document.getElementById("sid")
-               .innerHTML = currentTime;
-   }
-   showTime();
+
+        setInterval(showTime, 1000);
+        function showTime() {
+            let date = new Date();
+            let Y2 = date.getFullYear();
+            let M2 = date.getMonth() + 1;
+            let D2 = date.getDate();
+            var Month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            var D1 = 1;
+            var M1 = 5;
+            var Y1 = 2005;
+
+            if (D1 > D2) {
+                D2 = D2 + Month[M2 - 2];
+                M2 = M2 - 1;
+            }
+            if (M1 > M2) {
+                M2 = M2 + 12;
+                Y2 = Y2 - 1;
+            }
+            var D = D2 - D1;
+            var M = M2 - M1;
+            var Y = Y2 - Y1;
+
+            let currentTime = Y + "years "
+                + M + "months " + D + "days";
+
+            document.getElementById("sid")
+                .innerHTML = currentTime;
+        }
+        showTime();
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="Js/js.js"></script>
     <script src="Js/style-switcher.js"></script>
+
+
+    <!-- Right Click -->
+    <div id="contextMenu">
+        <div class="item">
+            <i class="fa fa-clone"></i> Copy
+        </div>
+        <div class="item" id="refresh">
+            <i class="fa fa-refresh"></i> Refresh
+        </div>
+        <div class="item day-night1 s-icon">
+            <i class="fas "></i> Day/Night
+        </div>
+        <div class="item s-icon">
+            <i class="fas fa-cog fa-spin"></i> Color
+            <div class="colors1">
+                <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+                <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+                <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+                <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+                <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+            </div>
+        </div>
+        <div class="item web" id="web">
+            <i class="fa fa-globe"></i> Website Code
+        </div>
+    </div>
+    <div id="background" class="blur-background"></div>
+
+    <script>
+        window.addEventListener("contextmenu", function (event) {
+            event.preventDefault();
+            var contextElement = document.getElementById("contextMenu");
+            contextElement.style.top = event.pageY + "px";
+            contextElement.style.left = event.pageX + "px";
+            contextElement.classList.add("active2")
+        });
+
+        window.addEventListener("click", function () {
+            document.getElementById("contextMenu").classList.remove("active2");
+        });
+
+        const dayNight1 = document.querySelector(".day-night1");
+        dayNight1.addEventListener("click", () => {
+            dayNight1.querySelector("i").classList.toggle("fa-sun");
+            dayNight1.querySelector("i").classList.toggle("fa-moon");
+            document.body.classList.toggle("dark");
+        })
+        window.addEventListener("load", () => {
+            if (document.body.classList.contains("dark")) {
+                dayNight1.querySelector("i").classList.add("fa-sun")
+            }
+            else {
+
+                dayNight1.querySelector("i").classList.add("fa-moon")
+            }
+        })
+
+        document.getElementById("refresh").addEventListener("click", function () {
+            location.reload();
+        });
+        
+        document.getElementById("web").addEventListener("click", function () {
+            alert("Fuck Off Bro....!!");
+        });
+
+    </script>
+
+
 </body>
 
 </html>
