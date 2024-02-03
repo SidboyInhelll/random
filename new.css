@@ -1,0 +1,73 @@
+#contextMenu {
+  position: absolute;
+  z-index: 10000;
+  width: 150px;
+  background-color: rgb(46, 46, 44, 0.8);
+  border-radius: 10px;
+  transform: scale(0);
+  transform-origin: top left;
+  cursor: pointer;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+#contextMenu.active2 {
+  transform: scale(1);
+  transition: transform 200ms ease-in-out;
+}
+
+#contextMenu .item {
+  padding: 8px 10px;
+  font-size: 15px;
+  color: #eee;
+
+}
+
+#contextMenu .item:hover {
+  background: rgba(23, 23, 22, 0.5);
+  border-radius: 10px;
+}
+
+#contextMenu .item i {
+  margin: 2px 0px;
+  border-color: var(--skin-color);
+
+}
+
+.colors1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.colors1 span {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.colors1 .color-1 {
+  background: #ff7187;
+}
+
+.colors1 .color-2 {
+  background: #f18d5e;
+}
+
+.colors1 .color-3 {
+  background: #62ffc3;
+}
+
+.colors1 .color-4 {
+  background: #5f89f3;
+}
+
+.colors1 .color-5 {
+  background: #8854e7;
+}
+
+.web a {
+  color: white;
+  text-decoration: none;
+}
