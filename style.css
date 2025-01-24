@@ -758,3 +758,16 @@ h3.my-profession {
         max-width: 100%;
     }
 }
+
+.circle {
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px white;
+    pointer-events: none;
+    position: fixed;
+    top: -10rem;
+    left: -10rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    z-index: 99;
+}
